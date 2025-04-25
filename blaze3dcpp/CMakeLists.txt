@@ -17,4 +17,4 @@ add_library(blaze3dcpp
     ${PLATFORM_CPP_SOURCES}
 )
 
-target_link_libraries(blaze3dcpp glad::glad glfw glm::glm log4cxx)
+target_link_libraries(blaze3dcpp glad::glad glfw glm::glm spdlog::spdlog)

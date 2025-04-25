@@ -1,7 +1,7 @@
-#include <glad/glad.h>
 #include <iostream>
+#include "platform/GLX.h"
+
 int main()
 {
-    std::cout << "Hello, World!" << std::endl;
     return 0;
 }
