@@ -1,7 +1,10 @@
-#include "platform/GLX.h"
+#include <glad/glad.h>
+#include "GLX.h"
 
 using blaze3dcpp::GLX;
 using blaze3dcpp::String;
+
+String GLX::m_cpuInfo = "unknow";
 
 String GLX::getOpenGLVersionString()
 {
@@ -22,28 +25,18 @@ int GLX::getRefreshRate(GLFWwindow* _window)
     return wmonitor == nullptr ? -1 : vidmode->refreshRate;
 }
 
-// static void checkGlfwError(const std::function<void(int, const std::string&)>& callback)
-// {
-//     const char *desc;
-//     const auto error = glfwGetError(&desc);
-//     if(error != GLFW_NO_ERROR)
-//     {
-//         std::string errorMsg = (desc != nullptr) ? desc : "Unknown error";
-//     }
-//     callback(error, desc);
-// }
-
+// UNFINISHED
 long GLX::initGlfw()
 {
     // checkGlfwError([](int a, const std::string& n) { throw std::runtime_error("GLFW error before init: [0x%X]%s" + std::string(n)); });
     // std::vector<String> list;
     if(!glfwInit())
     {
-        // throw std::runtime_error("Failed to initialize GLFW");
+        throw std::runtime_error("Failed to initialize GLFW");
     }
     else
     {
-        const long longSupplier = glfwGetTime() * static_cast<long>(1.0e9);
+        const long longSupplier = static_cast<long>(glfwGetTime() * 1.0e9);
         return longSupplier;
         // glfwSetErrorCallback()
     }
@@ -56,8 +49,9 @@ bool GLX::shouldClose(GLFWwindow* _window) noexcept
 {
     return glfwWindowShouldClose(_window);
 }
-void GLX::init(int, bool)
+void GLX::init(int, bool) {}
+
+String GLX::getCpuInfo() noexcept
 {
-
+    return m_cpuInfo;
 }
-

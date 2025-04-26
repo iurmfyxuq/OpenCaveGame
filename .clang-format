@@ -27,10 +27,12 @@ BraceWrapping:
   BeforeCatch: true
   BeforeElse: true
   IndentBraces:	false
+  SplitEmptyFunction: false
 BreakBeforeBinaryOperators:	NonAssignment
+BreakConstructorInitializers: AfterColon
+BreakConstructorInitializersBeforeComma: true
 BreakBeforeBraces: Custom
 BreakBeforeTernaryOperators: true
-BreakConstructorInitializersBeforeComma: false
 ColumnLimit: 200
 ConstructorInitializerAllOnOneLineOrOnePerLine:	false
 ConstructorInitializerIndentWidth: 4
@@ -39,13 +41,13 @@ Cpp11BracedListStyle:	false
 DerivePointerAlignment:	false
 DisableFormat: false
 ExperimentalAutoDetectBinPacking:	false
-IndentCaseLabels:	false
-IndentWidth:	4
-IndentWrappedFunctionNames:	false
+IndentCaseLabels: false
+IndentWidth: 4
+IndentWrappedFunctionNames:	true
 KeepEmptyLinesAtTheStartOfBlocks:	true
-MaxEmptyLinesToKeep:	1
-NamespaceIndentation:	Inner
-ObjCBlockIndentWidth:	4
+MaxEmptyLinesToKeep: 1
+NamespaceIndentation: All
+ObjCBlockIndentWidth: 4
 ObjCSpaceAfterProperty:	false
 ObjCSpaceBeforeProtocolList: true
 PenaltyBreakBeforeFirstCallParameter:	19

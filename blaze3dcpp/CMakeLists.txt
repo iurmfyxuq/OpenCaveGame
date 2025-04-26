@@ -5,11 +5,12 @@ find_package(glfw3 REQUIRED)
 find_package(glm REQUIRED)
 find_package(spdlog REQUIRED)
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-find_program(CLANG_TIDY_BIN NAMES "clang-tidy")
-if(CLANG_TIDY_BIN)
-  set(CMAKE_CXX_CLANG_TIDY "${CLANG_TIDY_BIN}" "-checks=*")
-endif()
+include_directories(include/platform)
+
+# GCC/Clang 的警告选项
+add_compile_options(-Wall -Wextra -pedantic -Werror)
+# 可选：更严格的警告
+add_compile_options(-Wconversion -Wshadow -Wdouble-promotion -Wformat=2)
 
 add_subdirectory(platform)
 

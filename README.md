@@ -9,7 +9,8 @@ I prepare rewrite all the java code to cpp.
 # Migration
 
 ## Dependencies
-| Minecraft | OpenCaveGame |
-|  ----  | ----  |
-| lwjgl | glad+glfw+glm |
-| slf4j | spdlog |
+| Minecraft | OpenCaveGame  |
+|-----------|---------------|
+| lwjgl     | glad+glfw+glm |
+| slf4j     | spdlog        |
+|           |               |
