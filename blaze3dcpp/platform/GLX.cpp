@@ -45,7 +45,7 @@ void GLX::setGlfwErrorCallback(const GLFWerrorfun _errorfun)
 {
     glfwSetErrorCallback(_errorfun);
 }
-bool GLX::shouldClose(GLFWwindow* _window) noexcept
+bool GLX::shouldClose(GLFWwindow* _window)
 {
     return glfwWindowShouldClose(_window);
 }

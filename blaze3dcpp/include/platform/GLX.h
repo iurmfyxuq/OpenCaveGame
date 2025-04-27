@@ -21,7 +21,7 @@ namespace blaze3dcpp
         static int getRefreshRate(GLFWwindow*);
         static long initGlfw();
         static void setGlfwErrorCallback(GLFWerrorfun);
-        static bool shouldClose(GLFWwindow*) noexcept;
+        static bool shouldClose(GLFWwindow*);
         static void init(int, bool);
         static String getCpuInfo() noexcept;
     };

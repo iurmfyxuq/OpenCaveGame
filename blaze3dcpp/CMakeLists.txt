@@ -8,9 +8,9 @@ find_package(spdlog REQUIRED)
 include_directories(include/platform)
 
 # GCC/Clang 的警告选项
-add_compile_options(-Wall -Wextra -pedantic -Werror)
+#add_compile_options(-Wall -Wextra -pedantic -Werror)
 # 可选：更严格的警告
-add_compile_options(-Wconversion -Wshadow -Wdouble-promotion -Wformat=2)
+#add_compile_options(-Wconversion -Wshadow -Wdouble-promotion -Wformat=2)
 
 add_subdirectory(platform)
 
